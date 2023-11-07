@@ -55,7 +55,7 @@ const Home = () => {
     <div className="dark:text-white">
       <div className="dark:text-[#fff]">
         <div className="w-[90%] md:w-[85%] mx-auto py-[40px]">
-          <div className="md:flex justify-between items-center mb-[70px] md:mb-[140px]">
+          <div className="md:flex   justify-between items-center mb-[70px] md:mb-[140px]">
             <div className="">
               <h3 className="font-[600] mb-[16px]">Woman’s Fashion</h3>
               <h3 className="font-[600] mb-[16px]">Men’s Fashion</h3>

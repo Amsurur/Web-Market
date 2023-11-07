@@ -34,24 +34,24 @@ export const Safi = () => {
               alt=""
             />
 
-            <p className=" text-white  text-[30px] absolute ml-[20px] mt-[100px] font-[600]">
+            <p className=" text-white  text-[30px] md:inline   hidden absolute ml-[20px] mt-[100px] font-[600]">
               Women’s Collections
             </p>
-            <p className=" text-[#FAFAFA] absolute ml-[20px] mt-[160px] text-[17px] font-[500]  w-[300px] ">
+            <p className=" text-[#FAFAFA] absolute md:inline  hidden ml-[20px] mt-[160px] text-[17px] font-[500]  w-[300px] ">
               Featured woman collections that give you another vibe.
             </p>
-            <p className=" text-white absolute ml-[20px] mt-[230px] font-[500]">
+            <p className=" text-white absolute ml-[20px] md:inline hidden mt-[230px] font-[500]">
               Shop Now
             </p>
           </div>
           <div class="num2">
-            <p className=" text-white absolute font-[600] text-[25px] ml-[20px] mt-[100px]">
+            <p className=" text-white absolute font-[600] md:inline   hidden text-[25px] ml-[20px] mt-[100px]">
               Perfume
             </p>
-            <p className=" text-white absolute font-[600] mt-[150px] ml-[20px]">
+            <p className=" text-white absolute font-[600]  md:inline   hidden mt-[150px] ml-[20px]">
               GUCCI INTENSE OUD EDP
             </p>
-            <p className=" text-white font-[600] mt-[185px] ml-[20px] absolute">
+            <p className=" text-white font-[600] mt-[185px] md:inline   hidden ml-[20px] absolute">
               Shop Now
             </p>
             <img
@@ -61,13 +61,13 @@ export const Safi = () => {
             />
           </div>
           <div class="num3">
-            <p className=" text-white absolute font-[600] text-[25px] ml-[20px] mt-[100px]">
+            <p className=" text-white absolute font-[600] md:inline   hidden text-[25px] ml-[20px] mt-[100px]">
               Speakers
             </p>
-            <p className=" text-white absolute font-[600] mt-[150px] ml-[20px]">
+            <p className=" text-white absolute font-[600] md:inline   hidden mt-[150px] ml-[20px]">
               Amazon wireless speakers
             </p>
-            <p className=" text-white font-[600] mt-[185px] ml-[20px] absolute">
+            <p className=" text-white font-[600] mt-[185px] md:inline   hidden ml-[20px] absolute">
               Shop Now
             </p>
             <img
@@ -77,13 +77,13 @@ export const Safi = () => {
             />
           </div>
           <div class="num4">
-            <p className=" text-white ml-[20px]  font-[600] text-[30px]  mt-[340px] absolute">
+            <p className=" text-white ml-[20px]  font-[600] md:inline   hidden text-[30px]  mt-[340px] absolute">
               PlayStation 5
             </p>
-            <p className=" text-white ml-[20px]  font-[600]  w-[300px]  mt-[400px] absolute">
+            <p className=" text-white ml-[20px]  font-[600] md:inline   hidden  w-[300px]  mt-[400px] absolute">
               Black and White version of the PS5 coming out on sale.
             </p>
-            <p className=" text-white ml-[20px] font-[600]  mt-[470px] absolute">
+            <p className=" text-white ml-[20px] font-[600] md:inline   hidden  mt-[470px] absolute">
               {" "}
               Shop Now
             </p>
@@ -95,7 +95,7 @@ export const Safi = () => {
           </div>
         </div>
 
-        <div className=" flex w-[70%] justify-center gap-[80px] ml-[15%]  mt-[200px]">
+        <div className=" flex flex-wrap w-[75%] justify-center gap-[80px] ml-[15%]  mt-[200px]">
           <div>
             <div className=" flex  justify-center">
               <img src="src/components/Safisrc/Services.png" alt="" />
