@@ -28,10 +28,10 @@ const CartList = () => {
     let total = 0;
     let subTotal = 0;
 
-    products.forEach((e) => {
-      total += e.price * productId;
-      subTotal += e.price * productId;
-    });
+    // products.forEach((e) => {
+    //   total += e.price * productId;
+    //   subTotal += e.price * productId;
+    // });
 
     setTotal(total);
     setSubTotal(subTotal);
@@ -72,7 +72,7 @@ const CartList = () => {
         <h1>Quantity</h1>
         <h1>Subtotal</h1>
 
-        {products.map((product, index) => (
+        {products?.map((product, index) => (
           <React.Fragment key={index}>
             <div className="flex gap-[25px] items-center max:flex-wrap dark:text-white">
               <img
@@ -86,7 +86,7 @@ const CartList = () => {
             <input
               type="number"
               value={productId}
-              onChange={(e) => productId(e.target.value)}
+              // onChange={(e) => productId(e.target.value)}
               className="w-[72px] h-[42px] border-[1.5px] border-solid border-[#00000066] dark:bg-[#272727] pl-[25px] rounded-[4px]"
             />
             <h1>${product.price * productId}</h1>{" "}

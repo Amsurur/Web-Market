@@ -72,7 +72,6 @@ export const GetProducts = createAsyncThunk(
 export const GetCart = createAsyncThunk("cartObj/GetCart", async () => {
   try {
     const { data } = await axiosRequest.get(CartApi);
-    console.log(data);
     return data;
   } catch (error) {
     console.error(error);
@@ -83,7 +82,7 @@ export const AddToCart = createAsyncThunk(
   async (e, { dispatch }) => {
     try {
       const { data } = await axiosRequest.post(CartApi, e);
-      console.log(e);
+
       dispatch(GetCart());
     } catch (error) {
       console.error(error);
@@ -128,11 +127,7 @@ export const onlineShop = createSlice({
     //   });
     // },
     ProductByIdFunc: (state, action) => {
-      state.ProductById = action.payload;
-    },
-
-    decrement: (state) => {
-      state.productId -= 1;
+      state.ProductById = action?.payload;
     },
   },
 
@@ -143,10 +138,9 @@ export const onlineShop = createSlice({
       state.Products = action.payload;
     });
     builder.addCase(GetCart.pending, (state, action) => {
-      console.log(123123);
+      console.log(1);
     });
     builder.addCase(GetCart.fulfilled, (state, action) => {
-      console.log(action);
       state.cartObj = action.payload;
     });
     // builder.addCase(AddToCart.fulfilled, (state, action) => {

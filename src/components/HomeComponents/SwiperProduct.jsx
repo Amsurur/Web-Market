@@ -26,7 +26,7 @@ import { GetProducts } from "../../reducers/onlineShop";
 export default function SwiperProduct() {
   const Products = useSelector((store) => store.onlineShop.Products);
   console.log(Products);
-  // console.log(Products);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetProducts());

@@ -3,7 +3,7 @@ import HoverRating from "../Rating";
 import { IconButton } from "@mui/material";
 import { useSSR } from "react-i18next";
 import { useSelector } from "react-redux";
-
+import img from "./71RdoeXxtrL 1.svg";
 const ProductDetalis = ({}) => {
   const ProductById = useSelector((store) => store.onlineShop.ProductById);
   console.log(ProductById);
@@ -20,34 +20,40 @@ const ProductDetalis = ({}) => {
           <span className="text-[gray]"> Gaming /</span>
           <span className=" font-medium"> Havic HV G-92 Gamepad</span>
         </h1>
-        <div className="w-[100%] flex flex-wrap justify-center items-center gap-[5%] py-[40px]">
-          <div className="xl:w-[55%] w-[80%] flex gap-[30px] ">
-            <div className="w-[24%] xs:hidden sm:block">
+        <div className="w-[100%]  flex flex-wrap justify-center items-center gap-[5%] py-[40px]">
+          <div className="xl:w-[55%] mb-60 w-[80%] flex gap-[30px] ">
+            {ProductById === null ? (
+              <div>
+                <img src={img} alt="" />
+              </div>
+            ) : (
+              <div className="w-[24%] xs:hidden sm:block">
+                <img
+                  className="w-[70%]"
+                  src={"http://localhost:3000/" + ProductById?.media[0]?.src}
+                  alt=""
+                />
+                <img
+                  className="w-[70%]"
+                  src={"http://localhost:3000/" + ProductById?.media[1]?.src}
+                  alt=""
+                />
+                <img
+                  className="w-[70%]"
+                  src={"http://localhost:3000/" + ProductById?.media[2]?.src}
+                  alt=""
+                />
+                <img
+                  className="w-[70%]"
+                  src={"http://localhost:3000/" + ProductById?.media[3]?.src}
+                  alt=""
+                />
+              </div>
+            )}
+            <div className="w-[100%] self-start h-[100px]">
               <img
-                className="w-[70%]"
-                src={"http://localhost:3000/" + ProductById?.media[0]?.src}
-                alt=""
-              />
-              <img
-                className="w-[70%]"
                 src={"http://localhost:3000/" + ProductById?.media[1]?.src}
-                alt=""
-              />
-              <img
-                className="w-[70%]"
-                src={"http://localhost:3000/" + ProductById?.media[2]?.src}
-                alt=""
-              />
-              <img
-                className="w-[70%]"
-                src={"http://localhost:3000/" + ProductById?.media[3]?.src}
-                alt=""
-              />
-            </div>
-            <div className="w-[100%] self-start h-[200px]">
-              <img
-                src={"http://localhost:3000/" + ProductById?.media[1]?.src}
-                className="w-[100%]"
+                className="w-[60%] object-cover "
                 alt=""
               />
             </div>

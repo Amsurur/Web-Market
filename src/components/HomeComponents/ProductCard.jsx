@@ -17,7 +17,16 @@ const ProductCard = ({ img, name, price, e }) => {
   const setProductById = useSelector((store) => store.onlineShop.ProductById);
   const cartObj = useSelector((store) => store.onlineShop.cartObj);
 
-  // console.log(cartObj);
+  const addToCart = () => {
+    let cart = localStorage.getItem("cart")
+      ? JSON.parse(localStorage.getItem("cart"))
+      : {};
+    let id = name;
+    cart[id] = cart[id]
+      ? { ...cart[id], quantity: cart[id].quantity + 1 }
+      : { img, name, price, quantity: 1 };
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetCart());
@@ -68,7 +77,8 @@ const ProductCard = ({ img, name, price, e }) => {
         {buttonBuy ? (
           <button
             onClick={() => {
-              dispatch(AddToCart(e));
+              // dispatch(AddToCart(e));
+              addToCart();
             }}
             className="w-[100%] h-[41px] text-[#fff] bg-black "
           >
